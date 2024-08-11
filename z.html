@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nameInput</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        #mainContainer {
+            text-align: center;
+        }
+        #redirectButton {
+            background: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #redirectButton:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainContainer">
+        <h1>¡Hola, <span id="userNameDisplay"></span>!</h1>
+        <button id="redirectButton">Ir a la Nueva Página</button>
+    </div>
+
+    <script>
+            function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Obtener el nombre de la URL y mostrarlo
+        const userName = getQueryParam('name');
+        document.getElementById('userNameDisplay').textContent = userName ? userName : 'Visitante';
+    </script>
+</body>
+</html>
