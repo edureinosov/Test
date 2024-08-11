@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindSafe</title>
     <style>
-        /* Fondo animado */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -31,7 +30,6 @@
                 background-position: 0% 50%;
             }
         }
-        /* Animaciones del contenido */
         #mainContainer {
             text-align: center;
             animation: fadeIn 2s ease-in-out;
@@ -57,12 +55,12 @@
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
-            animation: buttonFadeIn 1.5s ease-in-out;
+            animation: buttonFadeIn 1s ease-in-out;
         }
 
         #submitButton:hover {
             background: #00b36b;
-            animation: pulse 1s infinite;
+            animation: pulse 4s infinite;
         }
 
         #errorMessage {
@@ -73,7 +71,6 @@
             transition: opacity 0.5s ease-in-out;
         }
 
-        /* Definición de animaciones del contenido */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -134,7 +131,7 @@
             }
 
             50% {
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
 
             100% {
@@ -142,7 +139,6 @@
             }
         }
 
-        /* Estilo del botón de información */
         #infoButton {
             position: absolute;
             top: 20px;
@@ -158,10 +154,9 @@
 
         #infoButton:hover {
             background: #00b36b;
-            animation: pulse 1s infinite;
+            animation: pulse 8s infinite;
         }
 
-        /* Estilo del tooltip */
         #infoButton:hover::after {
             content: "MindSafe está dedicado a brindar apoyo emocional personalizado, especialmente a jóvenes, para abordar los desafíos y problemas de salud mental derivados del uso excesivo de redes sociales. Nuestro servicio se enfoca en proporcionar asistencia a través de un chatbot empático y comprensivo.";
             position: absolute;
@@ -176,7 +171,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Estilo del logo */
         #logoContainer {
             position: absolute;
             top: 20px;
@@ -187,7 +181,7 @@
         #logoContainer img {
             width: 120px;
             height: auto;
-            animation: logoPulse 2s infinite;
+            animation: logoPulse 8s infinite;
         }
 
         @keyframes logoFadeIn {
@@ -206,7 +200,7 @@
             }
 
             50% {
-                transform: scale(1.05);
+                transform: scale(1.1);
             }
 
             100% {
